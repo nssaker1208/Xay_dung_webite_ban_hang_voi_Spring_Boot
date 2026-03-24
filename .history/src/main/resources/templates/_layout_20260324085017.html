@@ -1,0 +1,21 @@
+<nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+  <div class="d-inline-flex align-items-center" style="padding-left: 40px">
+    <a class="navbar-brand" th:href="@{/products}">Home</a>
+    <a class="navbar-brand" th:href="@{/products/add}">Products</a>
+    <a class="navbar-brand" th:href="@{/cart}">Cart</a>
+    <form
+      class="form-inline d-flex justify-content-start"
+      th:action="@{/products/search}"
+      method="get"
+    >
+      <input
+        class="form-control"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+        name="key"
+      />
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
